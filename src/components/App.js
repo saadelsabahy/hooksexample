@@ -3,6 +3,8 @@ import HooksUseReducer from './HooksUseReducer';
 import ComponentA from './ComponentA';
 import ComponentB from './ComponentB';
 import PureComponentExample from './PureComponentExample';
+import UseMemo from './UseMemo';
+import UseRef from './UseRef';
 /* import HooksUsestate from './HooksUsestate';
 import UseEffectHook from './UseEffectHook';
 import MouseContainer from './MouseContainer';
@@ -29,7 +31,11 @@ const reducer = (state = INITIAL_STATE, action) => {
 function App() {
    const [counter, dispatch] = useReducer(reducer, INITIAL_STATE);
    return (
-      <PureComponentExample />
+      <React.Fragment>
+         <UseRef />
+         {/*  <PureComponentExample />
+         <UseMemo /> */}
+      </React.Fragment>
       // <appContext.Provider value={{ counter, dispatch }}>
       // 	<div>
       // 		{/* <MouseContainer /> */}
